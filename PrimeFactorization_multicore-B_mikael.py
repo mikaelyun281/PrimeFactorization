@@ -21,7 +21,7 @@ def factor(b):
             B = gmpy2.mpz(math.sqrt(2 * A + 0.25) - 1)
             D = gmpy2.mpz(A - (B * B + B) / 2)
         else:
-            B = ((b+1)*A/k)-1
+            B = gmpy2.mpz(((b+1)*A/k)-1)
             D = gmpy2.mpz(A - (B * B + B) / 2)
         while (D > 0):
             B += 1
