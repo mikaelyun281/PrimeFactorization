@@ -33,8 +33,6 @@ def factor(A):
 
 
 def output(A, E, F):
-    timer_stop = timeit.default_timer()
-    running_time = round(timer_stop - timer_start, 6)
     if A == 0:
         print(f"Initial Value Error: Reset the B value")
     else:
