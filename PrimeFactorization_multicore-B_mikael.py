@@ -29,7 +29,7 @@ def factor(b):
         n = gmpy2.mpz(0)
         while (D != 0 and B <= A):
             if (D > 0):
-                B += b+1
+                B += 1
                 D -= B
             else:
                 n += 1
