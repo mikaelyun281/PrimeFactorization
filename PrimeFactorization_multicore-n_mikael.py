@@ -22,15 +22,13 @@ def factor(n):
         while (D > 0):
             B += 1
             D = gmpy2.mpz(A - (B * B + B) / 2)
-        C = n
-        D += gmpy2.mpz(C * (C + 1) / 2)
+        D += gmpy2.mpz(n * (n + 1) / 2)
         while (D != 0 and B <= A):
             if (D > 0):
                 B += 1
                 D -= B
             else:
-                C = k * n + (k * (k + 1)) / 2
-                D += C
+                D += k * n + (k * (k + 1)) / 2
                 n += k
         if B > A:
             return output(0, 0, 0)
