@@ -28,7 +28,7 @@ def factor(n):
                 B += 1
                 D -= B
             else:
-                D = k * n + (k * (k + 1)) / 2
+                D += k * n + (k * (k + 1)) / 2
                 n += k
         if B > A:
             return output(0, 0, 0)
