@@ -63,14 +63,3 @@ if __name__ == '__main__':
         print("running time: ", running_time, " seconds")
     else:
         print("undefined for A<2")
-
-
-if __name__ == '__main__':
-    if A >= 2:
-        timer_start = timeit.default_timer()
-        factor(A)
-        timer_stop = timeit.default_timer()
-        running_time = round(timer_stop - timer_start, 6)
-        print("running time: ", running_time, " seconds")
-    else:
-        print("undefined for A<2")
