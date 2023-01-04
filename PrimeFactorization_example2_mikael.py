@@ -19,13 +19,17 @@ def factor(A):
     D += (n * (n + 1)) / 2
     B += 5028  # 9879358-4984330 = 5028 (mod 30000)
     D -= 5028 * B - (5028 * 5027) / 2
+    c = 0
     while (D != 0 and B <= A):
         if (D > 0):
             B += 30000
             D -= 30000 * B - 449985000
+            c +=1
         else:
             D += 30000 * n + 450015000
             n += 30000
+            c += 1
+    print(f"c: {c}")
     if B > A:
         return output(0, 0, 0)
     else:
@@ -48,6 +52,17 @@ def output(A, E, F):
         else:
             print(f"{A}  =  {E}  *  {F}")
     return 0
+
+
+if __name__ == '__main__':
+    if A >= 2:
+        timer_start = timeit.default_timer()
+        factor(A)
+        timer_stop = timeit.default_timer()
+        running_time = round(timer_stop - timer_start, 6)
+        print("running time: ", running_time, " seconds")
+    else:
+        print("undefined for A<2")
 
 
 if __name__ == '__main__':
